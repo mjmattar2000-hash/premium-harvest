@@ -112,7 +112,7 @@ export default function HomePage() {
             {/* Floating Badge - Parallax */}
             <motion.div
               style={{ y: useParallax(scrollYProgress, -50) }}
-              className="absolute top-[10%] right-[5%] md:top-[20%] md:right-[15%] z-20 hidden md:block"
+              className="absolute top-[5%] left-[5%] md:top-[15%] md:left-[10%] z-20 hidden md:block"
             >
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-lavenderaccent flex items-center justify-center p-4 text-center rotate-12 shadow-lg hover:scale-110 transition-transform duration-500 cursor-pointer group">
                 <p className="font-heading text-primary font-bold text-sm md:text-base leading-tight group-hover:-rotate-12 transition-transform duration-500">
