@@ -81,15 +81,6 @@ export default function HomePage() {
           </div>
 
           <div className="relative z-10 text-center max-w-[100rem] mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="mb-4"
-            >
-              <span className="font-heading italic text-2xl md:text-3xl text-secondary">the</span>
-            </motion.div>
-
             <h1 className="font-heading text-[12vw] leading-[0.85] font-black text-primary tracking-tighter uppercase mb-8">
               <motion.span
                 initial={{ y: 100, opacity: 0 }}
@@ -109,18 +100,6 @@ export default function HomePage() {
               </motion.span>
             </h1>
 
-            {/* Floating Badge - Parallax */}
-            <motion.div
-              style={{ y: useParallax(scrollYProgress, -50) }}
-              className="absolute top-[5%] left-[5%] md:top-[15%] md:left-[10%] z-20 hidden md:block"
-            >
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-lavenderaccent flex items-center justify-center p-4 text-center rotate-12 shadow-lg hover:scale-110 transition-transform duration-500 cursor-pointer group">
-                <p className="font-heading text-primary font-bold text-sm md:text-base leading-tight group-hover:-rotate-12 transition-transform duration-500">
-                  Natures<br/>Choice<br/><span className="font-paragraph font-normal text-xs">Parent Co.</span>
-                </p>
-              </div>
-            </motion.div>
-
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -131,6 +110,21 @@ export default function HomePage() {
               <p className="font-paragraph text-lg md:text-xl text-foreground/80 max-w-md mx-auto leading-relaxed">
                 Cultivating excellence. Delivering nature's finest to industry partners worldwide.
               </p>
+            </motion.div>
+
+            {/* Floating Badge - Moved below main content */}
+            <motion.div
+              style={{ y: useParallax(scrollYProgress, -30) }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
+              className="mt-16 inline-block"
+            >
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-lavenderaccent flex items-center justify-center p-4 text-center rotate-12 shadow-lg hover:scale-110 transition-transform duration-500 cursor-pointer group">
+                <p className="font-heading text-primary font-bold text-sm md:text-base leading-tight group-hover:-rotate-12 transition-transform duration-500">
+                  Natures<br/>Choice<br/><span className="font-paragraph font-normal text-xs">Parent Co.</span>
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
