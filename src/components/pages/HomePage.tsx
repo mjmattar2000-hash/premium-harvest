@@ -64,9 +64,7 @@ export default function HomePage() {
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
         style={{ scaleX }}
       />
-
       <Header />
-
       <main className="w-full">
         {/* --- HERO SECTION: The Countdown Begins (Reinterpreted) --- */}
         <section className="relative w-full min-h-screen flex flex-col items-center justify-center pt-20 pb-12 px-4 overflow-hidden">
@@ -160,11 +158,11 @@ export default function HomePage() {
                   className="w-full h-[120%] relative -top-[10%]"
                 >
                   <Image
-                    src="https://static.wixstatic.com/media/e51c33_6cc21678eb7e430abe9efa4246a5355e~mv2.png?originWidth=576&originHeight=576"
-                    alt="Organic Texture"
+                    src="https://static.wixstatic.com/media/e51c33_9bf86d4b963e4d3b96c76191592aecda~mv2.png"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                     width={600}
-                  />
+                    originWidth={442}
+                    originHeight={626} />
                 </motion.div>
               </div>
 
@@ -181,10 +179,7 @@ export default function HomePage() {
                     <span className="italic font-light">Possibilities</span> <br/>
                     ON THE HORIZON
                   </h2>
-                  <Link to="/shop" className="group inline-flex items-center gap-2 text-lg font-medium text-secondary hover:text-primary transition-colors">
-                    Don't Miss Out 
-                    <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </Link>
+
                 </motion.div>
 
                 <motion.div
@@ -250,9 +245,7 @@ export default function HomePage() {
                   <p className="mb-6">
                     Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
                   </p>
-                  <Link to="/about" className="inline-flex items-center gap-2 text-primary font-bold border-b-2 border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors mt-4">
-                    Read Our Story
-                  </Link>
+
                 </motion.div>
               </div>
             </div>
@@ -275,9 +268,9 @@ export default function HomePage() {
             <div className="flex gap-8 min-w-max">
               {isLoadingProducts ? (
                 // Loading Skeletons
-                Array.from({ length: 3 }).map((_, i) => (
+                (Array.from({ length: 3 }).map((_, i) => (
                   <div key={i} className="w-[350px] md:w-[450px] h-[500px] bg-primary-foreground/10 animate-pulse rounded-lg" />
-                ))
+                )))
               ) : featuredProducts.length > 0 ? (
                 featuredProducts.map((product, index) => (
                   <motion.div
@@ -431,7 +424,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
