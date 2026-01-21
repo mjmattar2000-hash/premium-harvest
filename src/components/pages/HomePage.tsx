@@ -66,20 +66,25 @@ export default function HomePage() {
       />
       <Header />
       <main className="w-full">
-        {/* --- HERO SECTION: The Countdown Begins (Reinterpreted) --- */}
-        <section className="relative w-full min-h-screen flex flex-col items-center justify-center pt-20 pb-12 px-4 overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 left-1/4 w-px h-full bg-primary/5" />
-            <div className="absolute top-0 right-1/4 w-px h-full bg-primary/5" />
-            <motion.div 
-              style={{ y: useParallax(scrollYProgress, 100) }}
-              className="absolute top-1/4 right-[10%] w-64 h-64 rounded-full bg-lavenderaccent/20 blur-3xl" 
-            />
+        {/* --- HERO SECTION: Luxury Dates Video Background --- */}
+        <section className="relative w-full min-h-screen flex flex-col items-center justify-center pt-20 pb-0 px-4 overflow-hidden">
+          {/* Video Background */}
+          <div className="absolute inset-0">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="https://static.wixstatic.com/media/e51c33_4df2057659ee461fbb34a9a8a48f7ca7~mv2.png?originWidth=1280&originHeight=704" type="video/mp4" />
+            </video>
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-black/40" />
           </div>
 
           <div className="relative z-10 text-center max-w-[100rem] mx-auto">
-            <h1 className="font-heading text-[12vw] leading-[0.85] font-black text-primary tracking-tighter uppercase mb-8">
+            <h1 className="font-heading text-[12vw] leading-[0.85] font-black text-white tracking-tighter uppercase mb-8 drop-shadow-2xl">
               <motion.span
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -94,7 +99,7 @@ export default function HomePage() {
                 transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 className="block"
               >
-                Harvest
+                Dates
               </motion.span>
             </h1>
 
@@ -104,9 +109,9 @@ export default function HomePage() {
               transition={{ delay: 1, duration: 1 }}
               className="flex flex-col items-center gap-4 mt-12"
             >
-              <div className="h-16 w-px bg-primary/20 mb-4" />
-              <p className="font-paragraph text-lg md:text-xl text-foreground/80 max-w-md mx-auto leading-relaxed">
-                Cultivating excellence. Delivering nature's finest to industry partners worldwide.
+              <div className="h-16 w-px bg-white/40 mb-4" />
+              <p className="font-paragraph text-lg md:text-xl text-white max-w-md mx-auto leading-relaxed drop-shadow-lg">
+                Cultivating excellence. Delivering nature's finest dates to industry partners worldwide.
               </p>
             </motion.div>
 
@@ -124,6 +129,95 @@ export default function HomePage() {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* --- CUSTOMER LOGOS SECTION: Infinite Scroller --- */}
+        <section className="w-full py-16 bg-background border-b border-primary/10">
+          <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+              Trusted By Industry Leaders
+            </h2>
+            <div className="relative overflow-hidden">
+              <motion.div
+                animate={{
+                  x: [0, -1920],
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 30,
+                    ease: "linear",
+                  },
+                }}
+                className="flex gap-16 items-center"
+              >
+                {/* Duplicate logos for seamless loop */}
+                {[...Array(2)].map((_, setIndex) => (
+                  <React.Fragment key={setIndex}>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
+                      <span className="font-heading text-primary font-bold text-lg">Logo 1</span>
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
+                      <span className="font-heading text-primary font-bold text-lg">Logo 2</span>
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
+                      <span className="font-heading text-primary font-bold text-lg">Logo 3</span>
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
+                      <span className="font-heading text-primary font-bold text-lg">Logo 4</span>
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
+                      <span className="font-heading text-primary font-bold text-lg">Logo 5</span>
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
+                      <span className="font-heading text-primary font-bold text-lg">Logo 6</span>
+                    </div>
+                  </React.Fragment>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* --- DATES CATALOGUE SECTION: Gallery Presentation --- */}
+        <section className="w-full py-24 bg-background relative">
+          <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
+            <div className="text-center mb-16">
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">
+                Our Premium Dates Collection
+              </h2>
+              <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+                Discover our exquisite selection of premium dates, carefully sourced and curated for excellence.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Placeholder for uploaded images */}
+              {[1, 2, 3, 4, 5, 6].map((item) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: item * 0.1 }}
+                  className="group relative aspect-square overflow-hidden rounded-lg bg-secondary/5"
+                >
+                  <Image
+                    src="https://static.wixstatic.com/media/e51c33_1d70915c3f1c45129415d995821486ec~mv2.png?originWidth=576&originHeight=576"
+                    alt={`Dates Catalogue ${item}`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    width={600}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="font-heading text-xl font-bold">Premium Dates {item}</h3>
+                    <p className="text-sm text-white/80">High-quality selection</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -306,7 +400,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* --- ACTIVITIES SECTION: Sticky Layout --- */}
+        {/* --- ACTIVITIES SECTION: Our Activities --- */}
         <section className="w-full py-32 bg-background">
           <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -319,7 +413,7 @@ export default function HomePage() {
                     </div>
                     <span className="font-heading text-xl text-secondary">Company News</span>
                   </div>
-                  <h2 className="font-heading text-5xl font-bold text-primary mb-8">Recent <br/>Activities</h2>
+                  <h2 className="font-heading text-5xl font-bold text-primary mb-8">Our <br/>Activities</h2>
                   <p className="text-foreground/70 mb-8 max-w-sm">
                     Staying connected with our community and the environment. See what we've been up to lately.
                   </p>
@@ -383,7 +477,7 @@ export default function HomePage() {
                     </motion.div>
                   ))
                 ) : (
-                  <div className="py-12 text-center text-foreground/50">No recent activities found.</div>
+                  <div className="py-12 text-center text-foreground/50">No activities found.</div>
                 )}
               </div>
             </div>
