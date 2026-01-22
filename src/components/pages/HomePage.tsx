@@ -191,9 +191,9 @@ export default function HomePage() {
               <div className="flex gap-6 min-w-max px-4">
                 {[
                   { id: 1, title: 'Our premium range', image: 'https://static.wixstatic.com/media/e51c33_9de954ba31744933b095c97558407f63~mv2.png' },
-                  { id: 2, title: 'Our Gourmet range', image: 'https://static.wixstatic.com/media/e51c33_f8c6e67e8d2e409eac66cfe3772447b2~mv2.png' },
                   { id: 3, title: 'Value Added products', image: 'https://static.wixstatic.com/media/e51c33_26a93bb0852649eab0f6d4b2f791c0f8~mv2.png' },
-                  { id: 4, title: 'Our everyday products', image: 'https://static.wixstatic.com/media/e51c33_163a1d43bb7f4c1081d65093291fb5bb~mv2.png' }
+                  { id: 4, title: 'Our everyday products', image: 'https://static.wixstatic.com/media/e51c33_163a1d43bb7f4c1081d65093291fb5bb~mv2.png' },
+                  { id: 2, title: 'Our Gourmet range', image: 'https://static.wixstatic.com/media/e51c33_f8c6e67e8d2e409eac66cfe3772447b2~mv2.png' }
                 ].map((item, index) => (
                   <motion.div
                     key={item.id}
