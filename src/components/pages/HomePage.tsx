@@ -128,7 +128,6 @@ export default function HomePage() {
             </motion.div>
           </div>
         </section>
-
         {/* --- CUSTOMER LOGOS SECTION: Infinite Scroller --- */}
         <section className="w-full py-16 bg-background border-b border-primary/10">
           <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
@@ -180,7 +179,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* --- DATES CATALOGUE SECTION: Horizontal Scroller --- */}
         <section className="w-full py-24 bg-background relative">
           <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
@@ -224,7 +222,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* --- QUOTE WITH IMAGES SECTION: Showcase --- */}
         <section className="w-full py-24 bg-background relative">
           <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
@@ -287,7 +284,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* --- TEXT COLUMNS SECTION: Narrative Flow --- */}
         <section className="w-full py-32 bg-background border-t border-primary/10">
           <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
@@ -334,60 +330,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* --- FEATURED PRODUCTS: Horizontal Scroll / Carousel --- */}
-        <section className="w-full py-32 bg-primary text-primary-foreground overflow-hidden">
-          <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12 mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
-            <div>
-              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">Wholesale Collection</h2>
-              <p className="text-primary-foreground/70 max-w-xl">Curated selections for our industry partners. Bulk availability guaranteed.</p>
-            </div>
-            <Link to="/shop" className="px-8 py-4 border border-primary-foreground/30 rounded-full hover:bg-primary-foreground hover:text-primary transition-all duration-300">
-              View Full Catalog
-            </Link>
-          </div>
-
-          <div className="w-full overflow-x-auto pb-12 px-4 md:px-8 lg:px-12 scrollbar-hide">
-            <div className="flex gap-8 min-w-max">
-              {isLoadingProducts ? (
-                // Loading Skeletons
-                (Array.from({ length: 3 }).map((_, i) => (
-                  <div key={i} className="w-[350px] md:w-[450px] h-[500px] bg-primary-foreground/10 animate-pulse rounded-lg" />
-                )))
-              ) : featuredProducts.length > 0 ? (
-                featuredProducts.map((product, index) => (
-                  <motion.div
-                    key={product._id}
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="w-[350px] md:w-[450px] group relative"
-                  >
-                    <Link to={`/shop/${product._id}`} className="block h-full">
-                      <div className="aspect-[4/5] overflow-hidden bg-background rounded-sm mb-6 relative">
-                        <div className="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-                        <Image
-                          src={product.productImage || 'https://static.wixstatic.com/media/e51c33_73b008bd23e846b8b501274ce6a2ea5b~mv2.png?originWidth=448&originHeight=448'}
-                          alt={product.productName || 'Product'}
-                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                          width={500}
-                        />
-                        <div className="absolute bottom-4 right-4 z-20 bg-white text-primary p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                          <ArrowRight size={20} />
-                        </div>
-                      </div>
-                      <h3 className="font-heading text-2xl font-bold mb-2 group-hover:text-lavenderaccent transition-colors">{product.productName}</h3>
-                      <p className="text-primary-foreground/60 line-clamp-2">{product.description}</p>
-                    </Link>
-                  </motion.div>
-                ))
-              ) : (
-                <div className="w-full text-center py-12 text-primary-foreground/50">No products currently available.</div>
-              )}
-            </div>
-          </div>
-        </section>
 
         {/* --- ACTIVITIES SECTION: Our Activities --- */}
         <section className="w-full py-32 bg-background">
@@ -472,7 +415,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* --- CTA SECTION: Full Bleed Impact --- */}
         <section className="w-full py-40 bg-secondary relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
