@@ -286,11 +286,11 @@ export default function HomePage() {
                   className="aspect-square overflow-hidden rounded-lg"
                 >
                   <Image
-                    src="https://static.wixstatic.com/media/e51c33_192a564371d9436e91162e639b567a75~mv2.webp"
-                    alt="Dates Syrup"
+                    src="https://static.wixstatic.com/media/e51c33_6d13ee83137a4cd3904052a93c66c7d4~mv2.jpg"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     width={400}
-                  />
+                    originWidth={768}
+                    originHeight={1024} />
                 </motion.div>
               </div>
 
