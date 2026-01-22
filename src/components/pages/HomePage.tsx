@@ -66,21 +66,18 @@ export default function HomePage() {
       />
       <Header />
       <main className="w-full">
-        {/* --- HERO SECTION: Luxury Dates Video Background --- */}
+        {/* --- HERO SECTION: Luxury Dates Image Background --- */}
         <section className="relative w-full min-h-screen flex flex-col items-center justify-center pt-20 pb-0 px-4 overflow-hidden">
-          {/* Video Background */}
+          {/* Luxury Dates Background Image */}
           <div className="absolute inset-0">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
+            <Image
+              src="https://images.unsplash.com/photo-1609501676725-7186f017a4b7?q=80&w=2070&auto=format&fit=crop"
+              alt="Premium Dates Background"
               className="w-full h-full object-cover"
-            >
-              <source src="https://static.wixstatic.com/media/e51c33_4df2057659ee461fbb34a9a8a48f7ca7~mv2.png?originWidth=1280&originHeight=704" type="video/mp4" />
-            </video>
+              width={2070}
+            />
             {/* Dark overlay for text readability */}
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/50" />
           </div>
 
           <div className="relative z-10 text-center max-w-[100rem] mx-auto">

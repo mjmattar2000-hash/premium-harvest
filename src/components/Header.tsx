@@ -27,14 +27,6 @@ export default function Header() {
               Home
             </Link>
             <Link
-              to="/about"
-              className={`font-paragraph text-base transition-colors ${
-                isActive('/about') ? 'text-primary font-semibold' : 'text-foreground hover:text-primary'
-              }`}
-            >
-              About
-            </Link>
-            <Link
               to="/shop"
               className={`font-paragraph text-base transition-colors ${
                 isActive('/shop') ? 'text-primary font-semibold' : 'text-foreground hover:text-primary'
