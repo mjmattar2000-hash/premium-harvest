@@ -71,13 +71,13 @@ export default function HomePage() {
           {/* Luxury Dates Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1609501676725-7186f017a4b7?q=80&w=2070&auto=format&fit=crop"
-              alt="Premium Dates Background"
+              src="https://static.wixstatic.com/media/e51c33_1cd4559ca4064aa289147023b90258ae~mv2.png"
+              alt="Premium Chocolate-Covered Dates Collection"
               className="w-full h-full object-cover"
               width={2070}
             />
-            {/* Dark overlay for text readability */}
-            <div className="absolute inset-0 bg-black/50" />
+            {/* Refined gradient overlay for elegant text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/60" />
           </div>
 
           <div className="relative z-10 text-center max-w-[100rem] mx-auto">
