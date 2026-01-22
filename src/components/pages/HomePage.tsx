@@ -312,7 +312,7 @@ export default function HomePage() {
                     Imagine biting into nature's candy—each date a small treasure of concentrated sweetness, complex flavors, and velvety texture. We're not just importers; we're flavor curators on a mission to bring you the world's most exceptional dates.
                   </p>
                   <p>
-                    From sun-drenched oases to your doorstep, we source premium varieties that most people have never experienced. Whether you're a chef seeking the perfect ingredient, a wellness enthusiast craving natural energy, or simply someone who appreciates the finer things, our carefully selected dates deliver an experience that supermarket varieties simply can't match.
+                    From sun-drenched oases to your doorstep, we source premium varieties that most people have never experienced.
                   </p>
                 </motion.div>
                 <motion.div
@@ -322,9 +322,11 @@ export default function HomePage() {
                   transition={{ delay: 0.4 }}
                 >
                   <p className="mb-6">
+                    Whether you're a chef seeking the perfect ingredient, a wellness enthusiast craving natural energy, or simply someone who appreciates the finer things, our carefully selected dates deliver an experience that supermarket varieties simply can't match.
+                  </p>
+                  <p>
                     This is where authentic flavor meets uncompromising quality.
                   </p>
-
                 </motion.div>
               </div>
             </div>
