@@ -54,7 +54,7 @@ export default function ShopPage() {
             className="max-w-4xl"
           >
             <h1 className="font-heading text-6xl lg:text-7xl font-bold text-primary-foreground mb-6">
-              Wholesale Products
+              Our Range
             </h1>
             <p className="font-paragraph text-xl text-primary-foreground/90 leading-relaxed">
               Explore our complete range of premium wholesale products from the Natures Choice brand. All items are available for bulk orders with flexible packaging options.

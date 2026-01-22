@@ -181,7 +181,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* --- DATES CATALOGUE SECTION: Gallery Presentation --- */}
+        {/* --- DATES CATALOGUE SECTION: Horizontal Scroller --- */}
         <section className="w-full py-24 bg-background relative">
           <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
             <div className="text-center mb-16">
@@ -193,105 +193,108 @@ export default function HomePage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Placeholder for uploaded images */}
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <motion.div
-                  key={item}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: item * 0.1 }}
-                  className="group relative aspect-square overflow-hidden rounded-lg bg-secondary/5"
-                >
-                  <Image
-                    src="https://static.wixstatic.com/media/e51c33_1d70915c3f1c45129415d995821486ec~mv2.png?originWidth=576&originHeight=576"
-                    alt={`Dates Catalogue ${item}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    width={600}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <h3 className="font-heading text-xl font-bold">Premium Dates {item}</h3>
-                    <p className="text-sm text-white/80">High-quality selection</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="w-full overflow-x-auto pb-8 scrollbar-hide">
+              <div className="flex gap-6 min-w-max px-4">
+                {[1, 2, 3, 4, 5].map((item) => (
+                  <motion.div
+                    key={item}
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: item * 0.1 }}
+                    className="group relative w-[350px] md:w-[450px] flex-shrink-0"
+                  >
+                    <div className="aspect-[4/5] overflow-hidden rounded-lg bg-secondary/5 relative">
+                      <Image
+                        src="https://static.wixstatic.com/media/e51c33_1d70915c3f1c45129415d995821486ec~mv2.png?originWidth=576&originHeight=576"
+                        alt={`Premium Dates ${item}`}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        width={500}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <h3 className="font-heading text-xl font-bold">Premium Dates {item}</h3>
+                        <p className="text-sm text-white/80">High-quality selection</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* --- COLLAGE GRID SECTION: Inspiration Image Layout --- */}
+        {/* --- QUOTE WITH IMAGES SECTION: Showcase --- */}
         <section className="w-full py-24 bg-background relative">
           <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               
-              {/* Block 1: Brown Box (Left) */}
-              <motion.div 
-                initial={{ opacity: 0, x: -50 }}
+              {/* Quote Section */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="md:col-span-5 lg:col-span-4 aspect-square bg-secondary relative flex items-center justify-center p-12 group overflow-hidden"
+                className="order-2 lg:order-1"
               >
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
-                <div className="relative z-10 bg-background p-4 shadow-2xl transform group-hover:scale-105 transition-transform duration-700 w-3/5 aspect-[3/4]">
-                   <Image
-                    src="https://static.wixstatic.com/media/e51c33_f110f8dd5ba3462284c259c28f46d0e8~mv2.png?originWidth=576&originHeight=576"
-                    alt="Premium Product Detail"
-                    className="w-full h-full object-cover"
-                    width={400}
-                  />
+                <div className="max-w-xl">
+                  <div className="mb-8">
+                    <span className="text-[120px] leading-none text-lavenderaccent font-heading">"</span>
+                  </div>
+                  <blockquote className="font-heading text-3xl md:text-4xl font-bold text-primary leading-tight mb-8">
+                    Nature's finest, delivered with care and commitment to excellence
+                  </blockquote>
+                  <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
+                    Every product we offer reflects our dedication to quality, sustainability, and the rich heritage of natural cultivation.
+                  </p>
                 </div>
               </motion.div>
 
-              {/* Block 2: Vertical Image (Middle) - Parallax Effect */}
-              <div className="md:col-span-3 lg:col-span-3 relative h-[60vh] md:h-auto md:aspect-[9/16] mt-12 md:mt-24 overflow-hidden">
-                <motion.div 
-                  style={{ y: useParallax(scrollYProgress, 40) }}
-                  className="w-full h-[120%] relative -top-[10%]"
-                >
-                  <Image
-                    src="https://static.wixstatic.com/media/e51c33_9bf86d4b963e4d3b96c76191592aecda~mv2.png"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-                    width={600}
-                    originWidth={442}
-                    originHeight={626} />
-                </motion.div>
-              </div>
-
-              {/* Block 3: Content & Lavender Box (Right) */}
-              <div className="md:col-span-4 lg:col-span-5 flex flex-col justify-between h-full gap-12">
+              {/* Three Images Grid */}
+              <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  transition={{ duration: 0.6 }}
+                  className="col-span-2 aspect-[16/9] overflow-hidden rounded-lg"
                 >
-                  <h2 className="font-heading text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
-                    EXCITING NEW <br/>
-                    <span className="italic font-light">Possibilities</span> <br/>
-                    ON THE HORIZON
-                  </h2>
-
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="bg-lavenderaccent w-full aspect-square md:aspect-[4/3] relative overflow-hidden group"
-                >
-                   <Image
-                    src="https://static.wixstatic.com/media/e51c33_26b525a8ae6d47d38cd9cb18fb9ea530~mv2.png?originWidth=576&originHeight=576"
-                    alt="Quality Assurance"
-                    className="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:scale-110 transition-transform duration-1000"
-                    width={600}
+                  <Image
+                    src="https://static.wixstatic.com/media/e51c33_f110f8dd5ba3462284c259c28f46d0e8~mv2.png?originWidth=576&originHeight=576"
+                    alt="Premium Quality"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    width={800}
                   />
-                  <div className="absolute bottom-0 left-0 p-6">
-                    <p className="font-heading text-primary font-bold text-xl">Quality First</p>
-                  </div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="aspect-square overflow-hidden rounded-lg"
+                >
+                  <Image
+                    src="https://static.wixstatic.com/media/e51c33_9bf86d4b963e4d3b96c76191592aecda~mv2.png"
+                    alt="Natural Excellence"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    width={400}
+                  />
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="aspect-square overflow-hidden rounded-lg"
+                >
+                  <Image
+                    src="https://static.wixstatic.com/media/e51c33_26b525a8ae6d47d38cd9cb18fb9ea530~mv2.png?originWidth=576&originHeight=576"
+                    alt="Sustainable Practices"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    width={400}
+                  />
                 </motion.div>
               </div>
 
