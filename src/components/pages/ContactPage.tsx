@@ -94,8 +94,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-heading text-xl font-bold text-primary mb-2">Email</h3>
-                    <p className="font-paragraph text-base text-foreground">info@premiumharvest.com</p>
-                    <p className="font-paragraph text-base text-foreground">sales@premiumharvest.com</p>
+                    <p className="font-paragraph text-base text-foreground">premiumharvestbarhi@gmail.com</p>
+                    <p className="font-paragraph text-base text-foreground">vikas.jakhere@premiumharvest.in</p>
                   </div>
                 </div>
 
@@ -105,8 +105,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-heading text-xl font-bold text-primary mb-2">Phone</h3>
-                    <p className="font-paragraph text-base text-foreground">+1 (555) 123-4567</p>
-                    <p className="font-paragraph text-sm text-foreground/60">Mon-Fri, 9am-5pm EST</p>
+                    <p className="font-paragraph text-base text-foreground">+91 9810591016</p>
+                    <p className="font-paragraph text-sm text-foreground/60">Mon-Fri, 9am-5pm</p>
                   </div>
                 </div>
 
@@ -116,19 +116,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-heading text-xl font-bold text-primary mb-2">Address</h3>
-                    <p className="font-paragraph text-base text-foreground">123 Industry Lane</p>
-                    <p className="font-paragraph text-base text-foreground">Business District</p>
-                    <p className="font-paragraph text-base text-foreground">United States</p>
+                    <p className="font-paragraph text-base text-foreground">1ST, Office Premises No 1A, Shivji Market Co-op. Premises, Soc. Ltd.</p>
+                    <p className="font-paragraph text-base text-foreground">Plot No. 8 and 9 Sector 19 D, VASHI NAVI MUMBAI</p>
+                    <p className="font-paragraph text-base text-foreground">Thane, Maharashtra, 400703</p>
                   </div>
-                </div>
-              </div>
-
-              <div className="mt-12 p-6 bg-lavenderaccent/20 rounded-lg">
-                <h3 className="font-heading text-xl font-bold text-primary mb-3">Business Hours</h3>
-                <div className="space-y-2 font-paragraph text-base text-foreground">
-                  <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                  <p>Saturday: 10:00 AM - 2:00 PM</p>
-                  <p>Sunday: Closed</p>
                 </div>
               </div>
             </motion.div>
@@ -282,14 +273,14 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:sales@premiumharvest.com"
+                href="mailto:vikas.jakhere@premiumharvest.in"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-secondary text-secondary font-paragraph text-base rounded-full hover:bg-secondary hover:text-secondary-foreground transition-all"
               >
                 <Mail size={18} />
                 Email Sales Team
               </a>
               <a
-                href="tel:+15551234567"
+                href="tel:+919810591016"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-secondary text-secondary-foreground font-paragraph text-base rounded-full hover:bg-secondary/90 transition-all"
               >
                 <Phone size={18} />

@@ -32,7 +32,7 @@ export default function Header() {
                 isActive('/shop') ? 'text-primary font-semibold' : 'text-foreground hover:text-primary'
               }`}
             >
-              Shop
+              Our Range
             </Link>
             <Link
               to="/contact"
