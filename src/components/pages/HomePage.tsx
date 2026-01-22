@@ -182,12 +182,8 @@ export default function HomePage() {
         <section className="w-full py-24 bg-background relative">
           <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
             <div className="text-center mb-16">
-              <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">
-                Our Premium Dates Collection
-              </h2>
-              <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-                Discover our exquisite selection of premium dates, carefully sourced and curated for excellence.
-              </p>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">Our Premium Collection</h2>
+              <p className="text-foreground/70 text-lg max-w-2xl mx-auto">Discover our exquisite selection of premium dates and date based products, carefully sourced and curated for excellence.</p>
             </div>
             
             <div className="w-full overflow-x-auto pb-8 scrollbar-hide">
