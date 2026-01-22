@@ -18,9 +18,6 @@ export default function Footer() {
               <Link to="/" className="font-paragraph text-sm opacity-90 hover:opacity-100 transition-opacity">
                 Home
               </Link>
-              <Link to="/about" className="font-paragraph text-sm opacity-90 hover:opacity-100 transition-opacity">
-                About Us
-              </Link>
               <Link to="/shop" className="font-paragraph text-sm opacity-90 hover:opacity-100 transition-opacity">
                 Shop
               </Link>
@@ -33,9 +30,9 @@ export default function Footer() {
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">Contact Information</h4>
             <div className="flex flex-col gap-3 font-paragraph text-sm opacity-90">
-              <p>Email: info@premiumharvest.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
-              <p>Address: 123 Industry Lane, Business District</p>
+              <p>Email: premiumharvestbarhi@gmail.com</p>
+              <p>Phone: +91 9810591016</p>
+              <p>Address: 1ST, Office Premises No 1A, Shivji Market Co-op. Premises, Soc. Ltd., Plot No. 8 and 9 Sector 19 D, VASHI NAVI MUMBAI, Thane, Maharashtra, 400703</p>
             </div>
           </div>
         </div>

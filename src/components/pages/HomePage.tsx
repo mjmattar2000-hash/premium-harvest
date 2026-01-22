@@ -153,23 +153,26 @@ export default function HomePage() {
                 {/* Duplicate logos for seamless loop */}
                 {[...Array(2)].map((_, setIndex) => (
                   <React.Fragment key={setIndex}>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
-                      <span className="font-heading text-primary font-bold text-lg">Logo 1</span>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_f5236c738abc4afbbceeda9eb854fd5f~mv2.png" alt="Partner Logo 1" className="w-full h-full object-contain" width={160} />
                     </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
-                      <span className="font-heading text-primary font-bold text-lg">Logo 2</span>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_51f41e86c653475986e202d5bbe37997~mv2.jpg" alt="Partner Logo 2" className="w-full h-full object-contain" width={160} />
                     </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
-                      <span className="font-heading text-primary font-bold text-lg">Logo 3</span>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_7e7568f5161e470f871284b5b9b8dc82~mv2.png" alt="Partner Logo 3" className="w-full h-full object-contain" width={160} />
                     </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
-                      <span className="font-heading text-primary font-bold text-lg">Logo 4</span>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_192a564371d9436e91162e639b567a75~mv2.webp" alt="Partner Logo 4" className="w-full h-full object-contain" width={160} />
                     </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
-                      <span className="font-heading text-primary font-bold text-lg">Logo 5</span>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_f5236c738abc4afbbceeda9eb854fd5f~mv2.png" alt="Partner Logo 5" className="w-full h-full object-contain" width={160} />
                     </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5">
-                      <span className="font-heading text-primary font-bold text-lg">Logo 6</span>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_51f41e86c653475986e202d5bbe37997~mv2.jpg" alt="Partner Logo 6" className="w-full h-full object-contain" width={160} />
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_7e7568f5161e470f871284b5b9b8dc82~mv2.png" alt="Partner Logo 7" className="w-full h-full object-contain" width={160} />
                     </div>
                   </React.Fragment>
                 ))}
@@ -283,8 +286,8 @@ export default function HomePage() {
                   className="aspect-square overflow-hidden rounded-lg"
                 >
                   <Image
-                    src="https://static.wixstatic.com/media/e51c33_26b525a8ae6d47d38cd9cb18fb9ea530~mv2.png?originWidth=576&originHeight=576"
-                    alt="Sustainable Practices"
+                    src="https://static.wixstatic.com/media/e51c33_192a564371d9436e91162e639b567a75~mv2.webp"
+                    alt="Dates Syrup"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     width={400}
                   />
