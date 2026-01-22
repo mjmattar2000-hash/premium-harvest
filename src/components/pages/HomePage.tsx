@@ -191,25 +191,30 @@ export default function HomePage() {
             
             <div className="w-full overflow-x-auto pb-8 scrollbar-hide">
               <div className="flex gap-6 min-w-max px-4">
-                {[1, 2, 3, 4, 5].map((item) => (
+                {[
+                  { id: 1, title: 'Our premium range' },
+                  { id: 2, title: 'Our Gourmet range' },
+                  { id: 3, title: 'Value Added products' },
+                  { id: 4, title: 'Our everyday products' }
+                ].map((item, index) => (
                   <motion.div
-                    key={item}
+                    key={item.id}
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: item * 0.1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="group relative w-[350px] md:w-[450px] flex-shrink-0"
                   >
                     <div className="aspect-[4/5] overflow-hidden rounded-lg bg-secondary/5 relative">
                       <Image
                         src="https://static.wixstatic.com/media/e51c33_1d70915c3f1c45129415d995821486ec~mv2.png?originWidth=576&originHeight=576"
-                        alt={`Premium Dates ${item}`}
+                        alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         width={500}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                        <h3 className="font-heading text-xl font-bold">Premium Dates {item}</h3>
+                        <h3 className="font-heading text-xl font-bold">{item.title}</h3>
                         <p className="text-sm text-white/80">High-quality selection</p>
                       </div>
                     </div>
@@ -246,20 +251,20 @@ export default function HomePage() {
                 </div>
               </motion.div>
 
-              {/* Three Images Grid */}
-              <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
+              {/* Two Images Grid */}
+              <div className="order-1 lg:order-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="col-span-2 aspect-[16/9] overflow-hidden rounded-lg"
+                  className="aspect-[4/5] overflow-hidden rounded-lg"
                 >
                   <Image
-                    src="https://static.wixstatic.com/media/e51c33_f110f8dd5ba3462284c259c28f46d0e8~mv2.png?originWidth=576&originHeight=576"
-                    alt="Premium Quality"
+                    src="https://static.wixstatic.com/media/e51c33_f57d6224df564d13bbd987126d65f0ae~mv2.jpg"
+                    alt="Premium Dates Collection"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                    width={800}
+                    width={400}
                   />
                 </motion.div>
                 
@@ -268,29 +273,14 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="aspect-square overflow-hidden rounded-lg"
+                  className="aspect-[4/5] overflow-hidden rounded-lg"
                 >
                   <Image
-                    src="https://static.wixstatic.com/media/e51c33_9bf86d4b963e4d3b96c76191592aecda~mv2.png"
-                    alt="Natural Excellence"
+                    src="https://static.wixstatic.com/media/e51c33_836136d8bab14691a98ebe8bad0439c6~mv2.jpg"
+                    alt="Gourmet Dates Selection"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     width={400}
                   />
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="aspect-square overflow-hidden rounded-lg"
-                >
-                  <Image
-                    src="https://static.wixstatic.com/media/e51c33_6d13ee83137a4cd3904052a93c66c7d4~mv2.jpg"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                    width={400}
-                    originWidth={768}
-                    originHeight={1024} />
                 </motion.div>
               </div>
 
@@ -323,10 +313,10 @@ export default function HomePage() {
                   transition={{ delay: 0.2 }}
                 >
                   <p className="mb-6">
-                    This is a space to share more about the business: who's behind it, what it does and what this site has to offer. It's an opportunity to tell the story behind the business or describe a special service or product it offers.
+                    Imagine biting into nature's candy—each date a small treasure of concentrated sweetness, complex flavors, and velvety texture. We're not just importers; we're flavor curators on a mission to bring you the world's most exceptional dates.
                   </p>
                   <p>
-                    You can use this section to share the company's history or highlight a particular feature that sets it apart from competitors.
+                    From sun-drenched oases to your doorstep, we source premium varieties that most people have never experienced. Whether you're a chef seeking the perfect ingredient, a wellness enthusiast craving natural energy, or simply someone who appreciates the finer things, our carefully selected dates deliver an experience that supermarket varieties simply can't match.
                   </p>
                 </motion.div>
                 <motion.div
@@ -336,7 +326,7 @@ export default function HomePage() {
                   transition={{ delay: 0.4 }}
                 >
                   <p className="mb-6">
-                    Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
+                    This is where authentic flavor meets uncompromising quality.
                   </p>
 
                 </motion.div>
