@@ -66,7 +66,7 @@ export default function ShopPage() {
       <section className="w-full bg-background py-24">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 min-h-[600px]">
-            {isLoading && skip === 0 ? null : products.length > 0 ? (
+            {products.length > 0 ? (
               products.map((product, index) => (
                 <motion.div
                   key={product._id}
