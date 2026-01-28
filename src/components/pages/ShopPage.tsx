@@ -46,16 +46,15 @@ export default function ShopPage() {
 
       {/* Hero Section */}
       <section className="w-full bg-primary py-20 lg:py-28">
-        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
+        <div className="max-w-[100rem] mx-auto px-6 lg:px-12 max-w-4xl">
+          <h1 className="font-heading text-6xl lg:text-7xl font-bold text-primary-foreground mb-6">
+            Our Range
+          </h1>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl"
           >
-            <h1 className="font-heading text-6xl lg:text-7xl font-bold text-primary-foreground mb-6">
-              Our Range
-            </h1>
             <p className="font-paragraph text-xl text-primary-foreground/90 leading-relaxed">
               Explore our complete range of premium wholesale products from the Natures Choice brand. All items are available for bulk orders with flexible packaging options.
             </p>
