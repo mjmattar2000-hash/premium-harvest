@@ -13,6 +13,7 @@ export default function ShopPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [hasNext, setHasNext] = useState(false);
   const [skip, setSkip] = useState(0);
+  const [hoveredProductId, setHoveredProductId] = useState<string | null>(null);
   const limit = 12;
 
   useEffect(() => {
@@ -78,14 +79,39 @@ export default function ShopPage() {
                   <Link
                     to={`/shop/${product._id}`}
                     className="block bg-background border-2 border-primary/10 rounded-lg overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all"
+                    onMouseEnter={() => setHoveredProductId(product._id)}
+                    onMouseLeave={() => setHoveredProductId(null)}
                   >
-                    <div className="aspect-square overflow-hidden bg-background">
-                      <Image
-                        src={product.productImage || 'https://static.wixstatic.com/media/e51c33_600d215b974e4b809b2ca65bb8c4349d~mv2.png?originWidth=384&originHeight=384'}
-                        alt={product.productName || 'Product'}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                        width={400}
-                      />
+                    <div className="aspect-square overflow-hidden bg-background relative">
+                      <motion.div
+                        initial={{ opacity: 1 }}
+                        animate={{ opacity: hoveredProductId === product._id ? 0 : 1 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute inset-0"
+                      >
+                        <Image
+                          src={product.productImage || 'https://static.wixstatic.com/media/e51c33_600d215b974e4b809b2ca65bb8c4349d~mv2.png?originWidth=384&originHeight=384'}
+                          alt={product.productName || 'Product'}
+                          className="w-full h-full object-cover"
+                          width={400}
+                        />
+                      </motion.div>
+                      
+                      {product.productImage1 && (
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: hoveredProductId === product._id ? 1 : 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="absolute inset-0"
+                        >
+                          <Image
+                            src={product.productImage1}
+                            alt={`${product.productName || 'Product'} - Actual Product`}
+                            className="w-full h-full object-cover"
+                            width={400}
+                          />
+                        </motion.div>
+                      )}
                     </div>
                     <div className="p-6">
                       {product.category && (

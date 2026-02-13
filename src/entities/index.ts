@@ -44,4 +44,6 @@ export interface WholesaleProducts {
   sku?: string;
   /** @wixFieldType text */
   category?: string;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  productImage1?: string;
 }
