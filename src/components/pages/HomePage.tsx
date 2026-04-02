@@ -120,11 +120,7 @@ export default function HomePage() {
               transition={{ delay: 1.2, duration: 0.8 }}
               className="mt-16 inline-block"
             >
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-lavenderaccent flex items-center justify-center p-4 text-center rotate-12 shadow-lg hover:scale-110 transition-transform duration-500 cursor-pointer group">
-                <p className="font-heading text-primary font-bold text-sm md:text-base leading-tight group-hover:-rotate-12 transition-transform duration-500">
-                  Natures<br/>Choice<br/><span className="font-paragraph font-normal text-xs">Parent Co.</span>
-                </p>
-              </div>
+
             </motion.div>
           </div>
         </section>
