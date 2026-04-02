@@ -158,6 +158,18 @@ export default function HomePage() {
                       <Image src="https://static.wixstatic.com/media/e51c33_20b3c2cb28444d5db05d2ad32f257cba~mv2.jpeg" alt="Yoga Bar Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_b35f6574c05443dc914dc201fdc1d1d2~mv2.png" alt="Happilo Logo" className="w-full h-full object-contain" width={160} />
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_3b067be5334a4df59e384fdffa1c6d34~mv2.png" alt="Farmley Logo" className="w-full h-full object-contain" width={160} />
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_1a2d531a758541c8b299c869575d79ec~mv2.png" alt="Kibi Kibi Logo" className="w-full h-full object-contain" width={160} />
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_965ecddc8ae441f8915bb1345f86ecb0~mv2.png" alt="Nutty Gritties Logo" className="w-full h-full object-contain" width={160} />
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
                       <Image src="https://static.wixstatic.com/media/e51c33_47e9b80d69c043c984aadac50d61a9a7~mv2.jpeg" alt="Wonderland Foods Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
@@ -167,7 +179,16 @@ export default function HomePage() {
                       <Image src="https://static.wixstatic.com/media/e51c33_20b3c2cb28444d5db05d2ad32f257cba~mv2.jpeg" alt="Yoga Bar Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_47e9b80d69c043c984aadac50d61a9a7~mv2.jpeg" alt="Wonderland Foods Logo" className="w-full h-full object-contain" width={160} />
+                      <Image src="https://static.wixstatic.com/media/e51c33_b35f6574c05443dc914dc201fdc1d1d2~mv2.png" alt="Happilo Logo" className="w-full h-full object-contain" width={160} />
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_3b067be5334a4df59e384fdffa1c6d34~mv2.png" alt="Farmley Logo" className="w-full h-full object-contain" width={160} />
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_1a2d531a758541c8b299c869575d79ec~mv2.png" alt="Kibi Kibi Logo" className="w-full h-full object-contain" width={160} />
+                    </div>
+                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
+                      <Image src="https://static.wixstatic.com/media/e51c33_965ecddc8ae441f8915bb1345f86ecb0~mv2.png" alt="Nutty Gritties Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                   </React.Fragment>
                 ))}
