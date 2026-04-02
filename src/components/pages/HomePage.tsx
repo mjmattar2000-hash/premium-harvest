@@ -149,25 +149,25 @@ export default function HomePage() {
                 {[...Array(2)].map((_, setIndex) => (
                   <React.Fragment key={setIndex}>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_f5236c738abc4afbbceeda9eb854fd5f~mv2.png" alt="Partner Logo 1" className="w-full h-full object-contain" width={160} />
+                      <Image src="https://static.wixstatic.com/media/e51c33_47e9b80d69c043c984aadac50d61a9a7~mv2.jpeg" alt="Wonderland Foods Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_51f41e86c653475986e202d5bbe37997~mv2.jpg" alt="Partner Logo 2" className="w-full h-full object-contain" width={160} />
+                      <Image src="https://static.wixstatic.com/media/e51c33_3051622b21514d2785aa61b0428e6c3a~mv2.jpeg" alt="Flyberry Gourmet Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_7e7568f5161e470f871284b5b9b8dc82~mv2.png" alt="Partner Logo 3" className="w-full h-full object-contain" width={160} />
+                      <Image src="https://static.wixstatic.com/media/e51c33_20b3c2cb28444d5db05d2ad32f257cba~mv2.jpeg" alt="Yoga Bar Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_192a564371d9436e91162e639b567a75~mv2.webp" alt="Partner Logo 4" className="w-full h-full object-contain" width={160} />
+                      <Image src="https://static.wixstatic.com/media/e51c33_47e9b80d69c043c984aadac50d61a9a7~mv2.jpeg" alt="Wonderland Foods Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_f5236c738abc4afbbceeda9eb854fd5f~mv2.png" alt="Partner Logo 5" className="w-full h-full object-contain" width={160} />
+                      <Image src="https://static.wixstatic.com/media/e51c33_3051622b21514d2785aa61b0428e6c3a~mv2.jpeg" alt="Flyberry Gourmet Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_51f41e86c653475986e202d5bbe37997~mv2.jpg" alt="Partner Logo 6" className="w-full h-full object-contain" width={160} />
+                      <Image src="https://static.wixstatic.com/media/e51c33_20b3c2cb28444d5db05d2ad32f257cba~mv2.jpeg" alt="Yoga Bar Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                     <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_7e7568f5161e470f871284b5b9b8dc82~mv2.png" alt="Partner Logo 7" className="w-full h-full object-contain" width={160} />
+                      <Image src="https://static.wixstatic.com/media/e51c33_47e9b80d69c043c984aadac50d61a9a7~mv2.jpeg" alt="Wonderland Foods Logo" className="w-full h-full object-contain" width={160} />
                     </div>
                   </React.Fragment>
                 ))}
