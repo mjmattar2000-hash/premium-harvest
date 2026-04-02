@@ -125,77 +125,7 @@ export default function HomePage() {
           </div>
         </section>
         {/* --- CUSTOMER LOGOS SECTION: Infinite Scroller --- */}
-        <section className="w-full py-16 bg-background border-b border-primary/10">
-          <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-              Trusted By Industry Leaders
-            </h2>
-            <div className="relative overflow-hidden">
-              <motion.div
-                animate={{
-                  x: [0, -1920],
-                }}
-                transition={{
-                  x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 30,
-                    ease: "linear",
-                  },
-                }}
-                className="flex gap-16 items-center"
-              >
-                {/* Duplicate logos for seamless loop */}
-                {[...Array(2)].map((_, setIndex) => (
-                  <React.Fragment key={setIndex}>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_47e9b80d69c043c984aadac50d61a9a7~mv2.jpeg" alt="Wonderland Foods Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_3051622b21514d2785aa61b0428e6c3a~mv2.jpeg" alt="Flyberry Gourmet Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_20b3c2cb28444d5db05d2ad32f257cba~mv2.jpeg" alt="Yoga Bar Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_b35f6574c05443dc914dc201fdc1d1d2~mv2.png" alt="Happilo Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_3b067be5334a4df59e384fdffa1c6d34~mv2.png" alt="Farmley Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_1a2d531a758541c8b299c869575d79ec~mv2.png" alt="Kibi Kibi Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_965ecddc8ae441f8915bb1345f86ecb0~mv2.png" alt="Nutty Gritties Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_47e9b80d69c043c984aadac50d61a9a7~mv2.jpeg" alt="Wonderland Foods Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_3051622b21514d2785aa61b0428e6c3a~mv2.jpeg" alt="Flyberry Gourmet Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_20b3c2cb28444d5db05d2ad32f257cba~mv2.jpeg" alt="Yoga Bar Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_b35f6574c05443dc914dc201fdc1d1d2~mv2.png" alt="Happilo Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_3b067be5334a4df59e384fdffa1c6d34~mv2.png" alt="Farmley Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_1a2d531a758541c8b299c869575d79ec~mv2.png" alt="Kibi Kibi Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                    <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-sm border border-primary/5 p-4">
-                      <Image src="https://static.wixstatic.com/media/e51c33_965ecddc8ae441f8915bb1345f86ecb0~mv2.png" alt="Nutty Gritties Logo" className="w-full h-full object-contain" width={160} />
-                    </div>
-                  </React.Fragment>
-                ))}
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        <section className="w-full py-24 md:py-32 bg-background relative overflow-hidden pt-24 px-6 md:px-12"> <div className="max-w-[120rem] mx-auto"> <h2 className="font-heading text-4xl md:text-6xl font-bold text-primary text-center mb-16 md:mb-20 leading-tight"> Trusted By <br /> Industry Leaders </h2> <div className="relative"> <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" /> <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" /> <motion.div animate={{ x: [0, -1920] }} transition={{ x: { repeat: Infinity, repeatType: "loop", duration: 30, ease: "linear" } }} className="flex gap-16 items-center py-4"> {[...Array(2)].map((_, setIndex) => ( <React.Fragment key={setIndex}> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_47e9b80d69c043c984aadac50d61a9a7~mv2.jpeg" alt="Wonderland Foods Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_3051622b21514d2785aa61b0428e6c3a~mv2.jpeg" alt="Flyberry Gourmet Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_20b3c2cb28444d5db05d2ad32f257cba~mv2.jpeg" alt="Yoga Bar Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_b35f6574c05443dc914dc201fdc1d1d2~mv2.png" alt="Happilo Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_3b067be5334a4df59e384fdffa1c6d34~mv2.png" alt="Farmley Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_1a2d531a758541c8b299c869575d79ec~mv2.png" alt="Kibi Kibi Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_965ecddc8ae441f8915bb1345f86ecb0~mv2.png" alt="Nutty Gritties Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_47e9b80d69c043c984aadac50d61a9a7~mv2.jpeg" alt="Wonderland Foods Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_3051622b21514d2785aa61b0428e6c3a~mv2.jpeg" alt="Flyberry Gourmet Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_20b3c2cb28444d5db05d2ad32f257cba~mv2.jpeg" alt="Yoga Bar Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_b35f6574c05443dc914dc201fdc1d1d2~mv2.png" alt="Happilo Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_3b067be5334a4df59e384fdffa1c6d34~mv2.png" alt="Farmley Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_1a2d531a758541c8b299c869575d79ec~mv2.png" alt="Kibi Kibi Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> <div className="flex-shrink-0 w-40 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-primary/10 p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl"> <Image src="https://static.wixstatic.com/media/e51c33_965ecddc8ae441f8915bb1345f86ecb0~mv2.png" alt="Nutty Gritties Logo" className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" width={160} /> </div> </React.Fragment> ))} </motion.div> </div> </div> </section>
         {/* --- DATES CATALOGUE SECTION: Horizontal Scroller --- */}
         <section className="w-full py-24 bg-background relative">
           <div className="max-w-[120rem] mx-auto px-4 md:px-8 lg:px-12">
