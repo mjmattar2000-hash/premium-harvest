@@ -64,7 +64,7 @@ export default function FactoryLocationsPage() {
                   <p>Vashi - 400703, Navi Mumbai, Maharashtra. India.</p>
                 </div>
                 <p className="font-paragraph text-sm text-foreground/70 mt-4">
-                  <span className="font-semibold">ISSAT License No.:</span> 10017022006763
+                  <span className="font-semibold">FSSAI LICENSE NO:</span> 10017022006763
                 </p>
               </div>
             </motion.div>
@@ -93,7 +93,7 @@ export default function FactoryLocationsPage() {
                   <p>Vashi - 400703, Navi Mumbai, Maharashtra. India</p>
                 </div>
                 <p className="font-paragraph text-sm text-foreground/70 mt-4">
-                  <span className="font-semibold">ISSAT License No.:</span> 11523015000129
+                  <span className="font-semibold">FSSAI LICENSE NO:</span> 11523015000129
                 </p>
               </div>
             </motion.div>
@@ -123,7 +123,7 @@ export default function FactoryLocationsPage() {
                   <p>Haryana - 131101. India</p>
                 </div>
                 <p className="font-paragraph text-sm text-foreground/70 mt-4">
-                  <span className="font-semibold">ISSAT License No.:</span> 10820020000113
+                  <span className="font-semibold">FSSAI LICENSE NO:</span> 10820020000113
                 </p>
               </div>
             </motion.div>
