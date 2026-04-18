@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const location = useLocation();
@@ -12,9 +13,13 @@ export default function Header() {
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <div className="text-2xl font-heading font-bold text-primary">
-              Premium Harvest
-            </div>
+            <Image
+              src="https://static.wixstatic.com/media/e51c33_53857f33ae0549e98a212f15977e7369~mv2.png"
+              alt="Premium Harvest Logo"
+              width={48}
+              height={48}
+              className="h-12 w-auto"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
