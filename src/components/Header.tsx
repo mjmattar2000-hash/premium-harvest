@@ -16,9 +16,9 @@ export default function Header() {
             <Image
               src="https://static.wixstatic.com/media/e51c33_53857f33ae0549e98a212f15977e7369~mv2.png"
               alt="Premium Harvest Logo"
-              width={240}
-              height={240}
-              className="h-64 w-auto"
+              width={120}
+              height={120}
+              className="h-32 w-auto"
             />
           </Link>
 
