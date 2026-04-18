@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, X, Building2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Building2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
 export default function ContactPage() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,7 +19,6 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [showLocations, setShowLocations] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -289,7 +289,7 @@ export default function ContactPage() {
                 Call Now
               </a>
               <button
-                onClick={() => setShowLocations(true)}
+                onClick={() => navigate('/factory-locations')}
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-paragraph text-base rounded-full hover:bg-primary hover:text-primary-foreground transition-all"
               >
                 <Building2 size={18} />
@@ -301,87 +301,6 @@ export default function ContactPage() {
       </section>
 
       <Footer />
-
-      {/* Factory Locations Modal */}
-      <Dialog open={showLocations} onOpenChange={setShowLocations}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="font-heading text-3xl text-primary">Our Factory Locations</DialogTitle>
-          </DialogHeader>
-          
-          <div className="space-y-8 py-6">
-            {/* Imported & Marketed By */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="border-l-4 border-primary pl-6"
-            >
-              <h3 className="font-heading text-xl font-bold text-primary mb-3">Imported & Marketed By</h3>
-              <div className="space-y-2">
-                <p className="font-paragraph text-base text-foreground font-semibold">Premium Harvest Limited</p>
-                <p className="font-paragraph text-base text-foreground">
-                  Office no. 1A, First Floor, Shivji Market,<br />
-                  Co-Operative Society Premises Ltd,<br />
-                  Sector-19D, Plot No. 8 & 9<br />
-                  Vashi - 400703, Navi Mumbai, Maharashtra. India.
-                </p>
-                <p className="font-paragraph text-sm text-foreground/70 mt-2">
-                  <span className="font-semibold">Issat Lic No.</span> 10017022006763
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Packed By - PNM */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="border-l-4 border-secondary pl-6"
-            >
-              <h3 className="font-heading text-xl font-bold text-primary mb-3">Packed By - PNM</h3>
-              <div className="space-y-2">
-                <p className="font-paragraph text-base text-foreground font-semibold">Premium Harvest Limited</p>
-                <p className="font-paragraph text-base text-foreground">
-                  Plot No. 4A, Sector 19F,<br />
-                  Vashi - 400703, Navi Mumbai, Maharashtra. India
-                </p>
-                <p className="font-paragraph text-sm text-foreground/70 mt-2">
-                  <span className="font-semibold">Issat Lic No.</span> 11523015000129
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Packed By - BRH */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="border-l-4 border-lavenderaccent pl-6"
-            >
-              <h3 className="font-heading text-xl font-bold text-primary mb-3">Packed By - BRH</h3>
-              <div className="space-y-2">
-                <p className="font-paragraph text-base text-foreground font-semibold">Premium Harvest Limited</p>
-                <p className="font-paragraph text-base text-foreground">
-                  Plot No. 533, HSIIDC Industrial Estate,<br />
-                  Phase II, Barhi, Dist. Sonipat,<br />
-                  Haryana - 131101. India
-                </p>
-                <p className="font-paragraph text-sm text-foreground/70 mt-2">
-                  <span className="font-semibold">Issat Lic No.</span> 10820020000113
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Note */}
-            <div className="bg-lavenderaccent/10 border border-lavenderaccent/30 rounded-lg p-4">
-              <p className="font-paragraph text-sm text-foreground/70">
-                <span className="font-semibold">Note:</span> To identify the facility, read the first three letters of the Batch Number on the product packaging.
-              </p>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }
