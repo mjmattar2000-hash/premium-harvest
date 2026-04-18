@@ -38,7 +38,7 @@ export default function FactoryLocationsPage() {
       <section className="w-full bg-background py-24">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           <div className="space-y-12">
-            {/* Imported & Marketed By */}
+            {/* Imported and Packed By */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function FactoryLocationsPage() {
                   <MapPin size={24} className="text-primary" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Imported & Marketed By</h2>
+                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Imported and Packed By</h2>
                   <p className="font-paragraph text-base text-foreground/70">Headquarters</p>
                 </div>
               </div>
