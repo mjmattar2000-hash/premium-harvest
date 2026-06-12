@@ -69,7 +69,7 @@ export default function FactoryLocationsPage() {
               </div>
             </motion.div>
 
-            {/* Packed By - PNM */}
+            {/* Packed By - PHL Navi Mumbai */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -82,15 +82,16 @@ export default function FactoryLocationsPage() {
                   <Building2 size={24} className="text-secondary" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Packed By - PNM</h2>
+                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Packed By - PHL Navi Mumbai</h2>
                   <p className="font-paragraph text-base text-foreground/70">Navi Mumbai Facility</p>
                 </div>
               </div>
               <div className="space-y-3 ml-16">
                 <p className="font-paragraph text-lg text-foreground font-semibold">Premium Harvest Limited</p>
                 <div className="font-paragraph text-base text-foreground space-y-1">
-                  <p>Plot No. 4A, Sector 19F,</p>
-                  <p>Vashi - 400703, Navi Mumbai, Maharashtra. India</p>
+                  <p>PLOT NO: PAP-C-124, TTC INDUSTRIAL AREA, MIDC,</p>
+                  <p>Turbhe Zone, Navi Mumbai Municipal Corporation (Thane Zone-4),</p>
+                  <p>Maharashtra, 400703</p>
                 </div>
                 <p className="font-paragraph text-sm text-foreground/70 mt-4">
                   <span className="font-semibold">FSSAI LICENSE NO:</span> 11523015000129
