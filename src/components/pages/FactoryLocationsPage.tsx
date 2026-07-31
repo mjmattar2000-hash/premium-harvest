@@ -38,19 +38,6 @@ export default function FactoryLocationsPage() {
       <section className="w-full bg-background py-24">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           <div className="space-y-12">
-            {/* Instruction Line */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-primary/5 border-l-4 border-primary rounded-lg p-6 lg:p-8"
-            >
-              <p className="font-paragraph text-base text-foreground leading-relaxed">
-                <span className="font-semibold text-primary">To identify the packing unit address:</span> Read the first three characters of the batch number on the product packaging and match it with the corresponding facility code below.
-              </p>
-            </motion.div>
-
             {/* Imported and Marketed By */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
