@@ -82,110 +82,95 @@ export default function FactoryLocationsPage() {
               </div>
             </motion.div>
 
-            {/* Packed By - PHL Navi Mumbai */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white border-l-4 border-secondary rounded-lg p-8 lg:p-12 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                  <Building2 size={24} className="text-secondary" />
+            {/* Facility Locations - Column Format */}
+            <div className="space-y-6">
+              {/* Facility 1 - BRH */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-white border-l-4 border-secondary rounded-lg p-8 lg:p-12 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-secondary-foreground font-heading font-bold text-lg">
+                      1
+                    </span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-heading text-2xl font-bold text-primary mb-1">BRH</h3>
+                    <div className="font-paragraph text-base text-foreground space-y-1 mb-4">
+                      <p>Premium Harvest Limited</p>
+                      <p>Plot No. 533, HSIIDC Industrial Estate,</p>
+                      <p>Phase II, Barhi, Dist. Sonipat,</p>
+                      <p>Haryana - 131101. India</p>
+                    </div>
+                    <p className="font-paragraph text-sm text-foreground/70">
+                      <span className="font-semibold">FSSAI LICENSE NO:</span> 10820020000113
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Packed By - TNM Navi Mumbai</h2>
-                  <p className="font-paragraph text-base text-foreground/70">Navi Mumbai Facility</p>
-                </div>
-              </div>
-              <div className="space-y-3 ml-16">
-                <p className="font-paragraph text-lg text-foreground font-semibold">Premium Harvest Limited</p>
-                <div className="font-paragraph text-base text-foreground space-y-1">
-                  <p>PLOT NO: PAP-C-124, TTC INDUSTRIAL AREA, MIDC,</p>
-                  <p>Turbhe Zone, Navi Mumbai Municipal Corporation (Thane Zone-4),</p>
-                  <p>Maharashtra, 400703</p>
-                </div>
-                <p className="font-paragraph text-sm text-foreground/70 mt-4">
-                  <span className="font-semibold">FSSAI LICENSE NO:</span> 11523015000129
-                </p>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* Packed By - BRH */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white border-l-4 border-lavenderaccent rounded-lg p-8 lg:p-12 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-lavenderaccent/30 flex items-center justify-center flex-shrink-0">
-                  <Building2 size={24} className="text-primary" />
+              {/* Facility 2 - TNM */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white border-l-4 border-lavenderaccent rounded-lg p-8 lg:p-12 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-lavenderaccent text-foreground font-heading font-bold text-lg">
+                      2
+                    </span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-heading text-2xl font-bold text-primary mb-1">TNM</h3>
+                    <div className="font-paragraph text-base text-foreground space-y-1 mb-4">
+                      <p>Premium Harvest Limited</p>
+                      <p>PLOT NO: PAP-C-124, TTC INDUSTRIAL AREA, MIDC,</p>
+                      <p>Turbhe Zone, Navi Mumbai Municipal Corporation (Thane Zone-4),</p>
+                      <p>Maharashtra, 400703</p>
+                    </div>
+                    <p className="font-paragraph text-sm text-foreground/70">
+                      <span className="font-semibold">FSSAI LICENSE NO:</span> 11523015000129
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Packed By - BRH</h2>
-                  <p className="font-paragraph text-base text-foreground/70">Haryana Facility</p>
-                </div>
-              </div>
-              <div className="space-y-3 ml-16">
-                <p className="font-paragraph text-lg text-foreground font-semibold">Premium Harvest Limited</p>
-                <div className="font-paragraph text-base text-foreground space-y-1">
-                  <p>Plot No. 533, HSIIDC Industrial Estate,</p>
-                  <p>Phase II, Barhi, Dist. Sonipat,</p>
-                  <p>Haryana - 131101. India</p>
-                </div>
-                <p className="font-paragraph text-sm text-foreground/70 mt-4">
-                  <span className="font-semibold">FSSAI LICENSE NO:</span> 10820020000113
-                </p>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* ... keep existing code (Packed By - BRH section) ... */}
-
-            {/* Note Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-lavenderaccent/10 border-2 border-lavenderaccent/30 rounded-lg p-8"
-            >
-              <p className="font-paragraph text-base text-foreground">
-                <span className="font-semibold text-primary">Note:</span> To identify the facility, read the first three letters of the Batch Number on the product packaging.
-              </p>
-            </motion.div>
-
-            {/* New Facility Code - Add here */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white border-l-4 border-primary rounded-lg p-8 lg:p-12 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Building2 size={24} className="text-primary" />
+              {/* Facility 3 - ZZZ */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-white border-l-4 border-primary rounded-lg p-8 lg:p-12 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground font-heading font-bold text-lg">
+                      3
+                    </span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-heading text-2xl font-bold text-primary mb-1">ZZZ</h3>
+                    <div className="font-paragraph text-base text-foreground space-y-1 mb-4">
+                      <p>Premium Harvest Limited</p>
+                      <p>PLOT NO: PAP-C-124, TTC INDUSTRIAL AREA, MIDC,</p>
+                      <p>Turbhe Zone, Navi Mumbai Municipal Corporation (Thane Zone-4),</p>
+                      <p>Maharashtra, 400703</p>
+                    </div>
+                    <p className="font-paragraph text-sm text-foreground/70">
+                      <span className="font-semibold">FSSAI LICENSE NO:</span> 11523015000129
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Packed By - [CODE]</h2>
-                  <p className="font-paragraph text-base text-foreground/70">Additional Facility</p>
-                </div>
-              </div>
-              <div className="space-y-3 ml-16">
-                <p className="font-paragraph text-lg text-foreground font-semibold">Premium Harvest Limited</p>
-                <div className="font-paragraph text-base text-foreground space-y-1">
-                  <p>[Facility Address Line 1]</p>
-                  <p>[Facility Address Line 2]</p>
-                  <p>[Facility Address Line 3]</p>
-                </div>
-                <p className="font-paragraph text-sm text-foreground/70 mt-4">
-                  <span className="font-semibold">FSSAI LICENSE NO:</span> [LICENSE NUMBER]
-                </p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
