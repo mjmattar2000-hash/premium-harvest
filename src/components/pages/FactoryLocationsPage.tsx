@@ -38,7 +38,20 @@ export default function FactoryLocationsPage() {
       <section className="w-full bg-background py-24">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           <div className="space-y-12">
-            {/* Imported and Packed By */}
+            {/* Instruction Line */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-primary/5 border-l-4 border-primary rounded-lg p-6 lg:p-8"
+            >
+              <p className="font-paragraph text-base text-foreground leading-relaxed">
+                <span className="font-semibold text-primary">To identify the packing unit address:</span> Read the first three characters of the batch number on the product packaging and match it with the corresponding facility code below.
+              </p>
+            </motion.div>
+
+            {/* Imported and Marketed By */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +64,7 @@ export default function FactoryLocationsPage() {
                   <MapPin size={24} className="text-primary" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Imported and Packed By</h2>
+                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Imported and Marketed By</h2>
                   <p className="font-paragraph text-base text-foreground/70">Headquarters</p>
                 </div>
               </div>
@@ -82,7 +95,7 @@ export default function FactoryLocationsPage() {
                   <Building2 size={24} className="text-secondary" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Packed By - PHL Navi Mumbai</h2>
+                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Packed By - TNM Navi Mumbai</h2>
                   <p className="font-paragraph text-base text-foreground/70">Navi Mumbai Facility</p>
                 </div>
               </div>
@@ -129,6 +142,8 @@ export default function FactoryLocationsPage() {
               </div>
             </motion.div>
 
+            {/* ... keep existing code (Packed By - BRH section) ... */}
+
             {/* Note Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -140,6 +155,36 @@ export default function FactoryLocationsPage() {
               <p className="font-paragraph text-base text-foreground">
                 <span className="font-semibold text-primary">Note:</span> To identify the facility, read the first three letters of the Batch Number on the product packaging.
               </p>
+            </motion.div>
+
+            {/* New Facility Code - Add here */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-white border-l-4 border-primary rounded-lg p-8 lg:p-12 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Building2 size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h2 className="font-heading text-3xl font-bold text-primary mb-2">Packed By - [CODE]</h2>
+                  <p className="font-paragraph text-base text-foreground/70">Additional Facility</p>
+                </div>
+              </div>
+              <div className="space-y-3 ml-16">
+                <p className="font-paragraph text-lg text-foreground font-semibold">Premium Harvest Limited</p>
+                <div className="font-paragraph text-base text-foreground space-y-1">
+                  <p>[Facility Address Line 1]</p>
+                  <p>[Facility Address Line 2]</p>
+                  <p>[Facility Address Line 3]</p>
+                </div>
+                <p className="font-paragraph text-sm text-foreground/70 mt-4">
+                  <span className="font-semibold">FSSAI LICENSE NO:</span> [LICENSE NUMBER]
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
