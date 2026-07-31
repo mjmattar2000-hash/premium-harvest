@@ -38,7 +38,7 @@ export default function FactoryLocationsPage() {
       <section className="w-full bg-background py-24">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           <div className="space-y-12">
-            {/* Imported and Marketed By */}
+            {/* Imported and Marketed By - At Top */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -67,6 +67,19 @@ export default function FactoryLocationsPage() {
                   <span className="font-semibold">FSSAI LICENSE NO:</span> 10017022006763
                 </p>
               </div>
+            </motion.div>
+
+            {/* Instruction Text */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white border-l-4 border-secondary rounded-lg p-8 lg:p-12 shadow-sm"
+            >
+              <p className="font-paragraph text-lg text-foreground leading-relaxed">
+                To identify packing unit address in India, read the first three characters of the batch number and see below:
+              </p>
             </motion.div>
 
             {/* Facility Locations - Column Format */}
