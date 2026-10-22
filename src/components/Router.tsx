@@ -7,6 +7,7 @@ import ShopPage from '@/components/pages/ShopPage';
 import ProductDetailPage from '@/components/pages/ProductDetailPage';
 import ContactPage from '@/components/pages/ContactPage';
 import FactoryLocationsPage from '@/components/pages/FactoryLocationsPage';
+import PrivacyPolicyPage from '@/components/pages/PrivacyPolicyPage';
 
 // Layout component that includes ScrollToTop
 function Layout() {
@@ -57,6 +58,13 @@ const router = createBrowserRouter([
         element: <FactoryLocationsPage />,
         routeMetadata: {
           pageIdentifier: 'factory-locations',
+        },
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicyPage />,
+        routeMetadata: {
+          pageIdentifier: 'privacy-policy',
         },
       },
       {
